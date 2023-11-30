@@ -1,4 +1,10 @@
-"/build"
-"/logs"
-"setup.py"
-"main.neek"
+```
+build/
+logs/
+setup.py
+main.neek
+__pycache__/
+app.log
+faviconV2.ico
+faviconV2.png
+```
