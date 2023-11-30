@@ -3,3 +3,5 @@
 2023-11-30 15:22:03,725 - INFO - Setting up UI components
 2023-11-30 15:22:03,844 - DEBUG - Frame reconfigured. Updating canvas scrollregion.
 2023-11-30 15:22:03,850 - DEBUG - Frame reconfigured. Updating canvas scrollregion.
+2023-11-30 15:22:08,023 - ERROR - File validation error: Expecting value: line 1 column 1 (char 0)
+2023-11-30 15:22:15,986 - DEBUG - Populating the treeview with the parsed information.

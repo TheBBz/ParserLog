@@ -16,7 +16,7 @@ setup(
     description='Electroneek Parser Tool',
     options={'build_exe': build_exe_options},
     executables=[Executable(
-        'test_parser_1.py', 
+        'parsertool.py', 
         base=base, 
         target_name='Electroneek Parser Tool.exe', 
         icon='faviconV2.ico'
