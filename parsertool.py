@@ -570,14 +570,27 @@ class LogProcessor:
         if not item:
             return
         self.logs_tree.selection_set(item)
-
+        # Get the values from the selected item
+        selected_values = self.logs_tree.item(item, "values")
+    
         context_menu = tk.Menu(self.root, tearoff=0)
         context_menu.add_command(label="Log Details", command=lambda event=event: self.display_log_detail(event))
         context_menu.add_command(label="Activity Documentation", command=lambda: self.open_documentation(event))
         context_menu.add_command(label="Copy Log to Clipboard", command=self.copy_log_to_clipboard)
-
+    
+        # Check if the selected item has an 'Output Result' to copy
+        if len(selected_values) > 4:  # Check if 'Output Result' index exists
+            output_result = selected_values[4]  # Assuming 'Output Result' is at index 4
+            context_menu.add_command(label="Copy Output Result to Clipboard", 
+                                     command=lambda: self.copy_to_clipboard(output_result))
+    
         context_menu.tk_popup(event.x_root, event.y_root)
+    def copy_to_clipboard(self, text):
 
+        self.root.clipboard_clear()
+        self.root.clipboard_append(text)
+        self.root.update_idletasks() 
+    
     def on_scroll(self, event):
         if not self.treeview_loaded:  # Prevent further loading while Treeview is still loading previous data
             return
