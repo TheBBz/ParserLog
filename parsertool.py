@@ -511,7 +511,7 @@ class LogProcessor:
 
         # Bottom separator
         ttk.Separator(help_window).pack(fill=tk.X, pady=5)
-        version_label = tk.Label(help_window, text="Version: 1.0", anchor="w", font=font_setting)
+        version_label = tk.Label(help_window, text="Version: 1.1", anchor="w", font=font_setting)
         version_label.pack(pady=5, padx=10, anchor="w")
 
     def format_json_for_display(self, data):
@@ -590,7 +590,7 @@ class LogProcessor:
         self.root.clipboard_clear()
         self.root.clipboard_append(text)
         self.root.update_idletasks() 
-    
+
     def on_scroll(self, event):
         if not self.treeview_loaded:  # Prevent further loading while Treeview is still loading previous data
             return
